@@ -547,7 +547,7 @@ class MainActivity : AppCompatActivity() {
         if (completed > 0)
             entries.add(PieEntry(completed.toFloat(), "Completed"))
 
-        val dataSet = PieDataSet(entries, "Tasks")
+        val dataSet = PieDataSet(entries, "")
 
         dataSet.colors = listOf(
             Color.parseColor("#FFA000"),   // Orange
@@ -577,10 +577,29 @@ class MainActivity : AppCompatActivity() {
 
         pieChart.setDrawEntryLabels(false)
 
-        pieChart.legend.isEnabled = true
-        pieChart.legend.textColor = Color.BLACK
+        val legend = pieChart.legend
 
-        pieChart.legend.textSize = 13f
+        legend.isEnabled = true
+        legend.textColor = Color.BLACK
+        legend.textSize = 12f
+
+        legend.orientation =
+            com.github.mikephil.charting.components.Legend.LegendOrientation.HORIZONTAL
+
+        legend.horizontalAlignment =
+            com.github.mikephil.charting.components.Legend.LegendHorizontalAlignment.CENTER
+
+        legend.verticalAlignment =
+            com.github.mikephil.charting.components.Legend.LegendVerticalAlignment.BOTTOM
+
+        legend.setDrawInside(false)
+
+        legend.xEntrySpace = 12f
+        legend.yEntrySpace = 8f
+        legend.formToTextSpace = 5f
+        legend.formSize = 8f
+
+        legend.isWordWrapEnabled = true
 
         pieChart.animateY(1200)
 
