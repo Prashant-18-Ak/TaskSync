@@ -147,9 +147,9 @@ class TaskAdapter(
     }
 
     override fun getItemCount(): Int {
-        android.util.Log.d("TASK_DEBUG", "Adapter Count = ${taskList.size}")
         return taskList.size
     }
+
 
     fun updateTasks(newTasks: List<TaskEntity>) {
         taskList = newTasks

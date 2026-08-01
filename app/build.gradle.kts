@@ -69,7 +69,6 @@ dependencies {
 
     implementation(libs.androidx.cardview)
 
-    implementation("androidx.work:work-runtime-ktx:2.10.3")
     implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
     implementation("com.google.android.material:material:1.12.0")
 

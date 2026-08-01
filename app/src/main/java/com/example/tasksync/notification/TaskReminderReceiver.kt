@@ -6,7 +6,6 @@ import android.app.PendingIntent
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
-import android.widget.Toast
 import androidx.core.app.NotificationCompat
 import com.example.tasksync.MainActivity
 import com.example.tasksync.R
@@ -15,15 +14,6 @@ class TaskReminderReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent) {
 
-        Toast.makeText(
-
-            context,
-
-            "Receiver Triggered",
-
-            Toast.LENGTH_LONG
-
-        ).show()
 
         val title = intent.getStringExtra("title") ?: "Task Reminder"
 

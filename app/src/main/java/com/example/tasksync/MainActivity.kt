@@ -317,8 +317,6 @@ class MainActivity : AppCompatActivity() {
                 pieChart.visibility = View.VISIBLE
 
             }
-
-            android.util.Log.d("TASK_DEBUG", "Tasks from Room = ${tasks.size}")
         }
 
 
@@ -385,8 +383,6 @@ class MainActivity : AppCompatActivity() {
 
             else -> filteredList
         }
-
-        android.util.Log.d("TASK_DEBUG", "Filtered = ${filteredList.size}")
 
         adapter.filterList(filteredList)
 
